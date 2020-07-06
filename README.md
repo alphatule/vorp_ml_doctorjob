@@ -20,7 +20,4 @@
 
 - Open menu with [U]
 
-
-======================================
-
 - Based on [MrLupo](https://github.com/mrlupo) [ml_doctorjob](https://github.com/mrlupo/ml_policejob)
