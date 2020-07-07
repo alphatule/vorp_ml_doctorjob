@@ -11,6 +11,7 @@
 - Put vorp_ml_doctorjob to your resource folder
 - Add ```ensure vorp_ml_doctorjob``` in your server.cfg
 - You can change the language in ```config.lua``` in ```Config.locale```
+- To get the job use ingame ```/setjob [ID] [JOB]```
 
 
 ## 3. Support
