@@ -18,7 +18,7 @@
 - To get support --> [Discord](http://discord.vorpcore.com/)
 
 ## 4. Info
-
+- KLS
 - Open menu with [U]
 
 - Based on [MrLupo](https://github.com/mrlupo) [ml_doctorjob](https://github.com/mrlupo/ml_policejob)
