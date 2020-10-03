@@ -1,17 +1,20 @@
-RegisterServerEvent("vorp_ml_doctorjob:checkjob")
-AddEventHandler("vorp_ml_doctorjob:checkjob", function()
-      local _souce = source
-    TriggerEvent('vorp:getCharacter', _souce, function(user)
--- print(user.getJob())
-print(user.job)
-        if user.job == 'doctor' then
-            TriggerClientEvent('vorp_ml_doctorjob:open', _souce)
-        else
-            print('not authorized')
-        end
-    end)
+local VorpCore = {}
+
+TriggerEvent("getCore",function(core)
+    VorpCore = core
 end)
 
+RegisterServerEvent("vorp_ml_doctorjob:checkjob")
+AddEventHandler("vorp_ml_doctorjob:checkjob", function()
+    local _source = source
+    local Character = VorpCore.getUser(_source).getUsedCharacter
+    local job = Character.job
+    if job == 'doctor' then
+        TriggerClientEvent('vorp_ml_doctorjob:open', _source)
+    else
+        print('not authorized')
+    end
+end)
 
 RegisterServerEvent( 'vorp_ml_doctorjob:healplayer' )
 AddEventHandler( 'vorp_ml_doctorjob:healplayer', function (target)
